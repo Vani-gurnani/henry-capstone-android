@@ -54,15 +54,14 @@ public class MainActivity extends Activity
             //Map
             case 1:
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, Map.newInstance(position))
+                        .replace(R.id.container, Product.newInstance(position))
                         .commit();
                 break;
-            //Flash
+
             case 2:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, FlashLight.newInstance(position ))
-                        .commit();
+                fragmentManager.beginTransaction().replace(R.id.container, Promotion.newInstance(position)).commit();
                 break;
+
             //Developers
             case 3:
                 fragmentManager.beginTransaction()
@@ -87,10 +86,10 @@ public class MainActivity extends Activity
                 mTitle = getString(R.string.title_home);
                 break;
             case 1:
-                mTitle = getString(R.string.title_map);
+                mTitle = getString(R.string.title_product);
                 break;
             case 2:
-                mTitle = getString(R.string.title_flash);
+                mTitle = getString(R.string.title_promotion);
                 break;
             case 3:
                 mTitle = getString(R.string.title_developer_profile);

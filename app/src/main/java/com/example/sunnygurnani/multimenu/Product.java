@@ -8,22 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Map extends Fragment  {
+public class Product extends Fragment  {
 
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private OnFragmentInteractionListener mListener;
 
-    public static Map newInstance(int sectionNumber) {
-        Map fragment = new Map();
+    public static Product newInstance(int sectionNumber) {
+        Product fragment = new Product();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
 
-    public Map() {
+    public Product() {
         // Required empty public constructor
     }
 
@@ -32,7 +32,7 @@ public class Map extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map, container, false);
+        return inflater.inflate(R.layout.fragment_product, container, false);
     }
 
 

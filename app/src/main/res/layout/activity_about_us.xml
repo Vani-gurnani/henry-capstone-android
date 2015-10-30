@@ -7,7 +7,7 @@
     tools:context="com.example.sunnygurnani.multimenu.AboutUs">
 
     <TextView android:text="About Us
-    This app is use for ...." android:layout_width="wrap_content"
+    This app is use for interact....." android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>

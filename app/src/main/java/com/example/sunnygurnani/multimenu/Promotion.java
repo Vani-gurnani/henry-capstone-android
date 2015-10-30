@@ -8,23 +8,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
-public class FlashLight extends Fragment  {
-
-
+/**
+ * Created by sunnygurnani on 10/29/15.
+ */
+public class Promotion extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private OnFragmentInteractionListener mListener;
 
-    public static FlashLight newInstance(int sectionNumber) {
-        FlashLight fragment = new FlashLight();
+    public static Promotion newInstance(int sectionNumber) {
+        Promotion fragment = new Promotion();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
 
-    public FlashLight() {
+    public Promotion() {
         // Required empty public constructor
     }
 
@@ -33,7 +33,7 @@ public class FlashLight extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_flash_light, container, false);
+        return inflater.inflate(R.layout.fragment_promotion, container, false);
     }
 
 
@@ -56,6 +56,4 @@ public class FlashLight extends Fragment  {
         super.onDetach();
         mListener = null;
     }
-
-
 }
