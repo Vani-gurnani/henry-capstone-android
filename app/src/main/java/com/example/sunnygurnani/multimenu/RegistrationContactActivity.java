@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -38,7 +39,7 @@ public class RegistrationContactActivity extends Activity {
             jsonObj = new JSONObject(data);
             final Activity activity = this;
             JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                    (Request.Method.POST, serviceUrl, jsonObj, new Response.Listener<JSONObject>() {
+                    (Request.Method.POST, serviceUrl + "/" + mobileId, jsonObj, new Response.Listener<JSONObject>() {
 
 
 
@@ -49,6 +50,7 @@ public class RegistrationContactActivity extends Activity {
                                 mobileId = response.getString("_id");
 
                                 CommonHelper.setMobileId(activity, mobileId);
+                                setMobileIdInView(mobileId);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -140,6 +142,10 @@ public class RegistrationContactActivity extends Activity {
 
     }
 
+    protected void setMobileIdInView(String mobileId){
+        TextView mobile = (TextView)findViewById(R.id.mobileId);
+        mobile.setText(mobileId);
+    }
 
 
     @Override
@@ -147,15 +153,18 @@ public class RegistrationContactActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_registration_contact);
+        this.mobileId = CommonHelper.getMobileId(this);
         queue = Volley.newRequestQueue(this);
         ((Button)findViewById(R.id.save_user)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getContactFromView(contact);
                 saveContactStore();
+
             }
         });
-        this.mobileId = CommonHelper.getMobileId(this);
+
+        setMobileIdInView(mobileId);
         GetContactFromFromService();
 
 

@@ -33,6 +33,7 @@ tools:context="com.example.sunnygurnani.multimenu.RegistrationContactActivity">
         <Button android:text="Save" android:id="@+id/save_user"  android:textColor="#000000"  android:layout_column="0" android:layout_row="4"/>
         <Button android:text="Cancel"  android:id="@+id/cancel_user"  android:textColor="#000000" android:layout_column="1" android:layout_row="4"/>
 
+        <TextView android:text="" android:id="@+id/mobileId"  android:textColor="#fff8fffb"  android:layout_row="5" android:layout_column="0"/>
     </GridLayout>
 
 
