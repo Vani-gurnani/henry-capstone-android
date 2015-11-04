@@ -5,20 +5,27 @@ package com.example.sunnygurnani.multimenu;
  */
 public class Contact {
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return Firstname;
     }
 
-    public void setFirstName(String name_user1) {
-        this.firstName = name_user1;
+    public void setFirstname(String fname_user) {
+        this.Firstname = fname_user;
+    }
+    public String getLastname() {
+        return Lastname;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public void setLastname(String lname_user) {
+        this.Lastname = lname_user;
     }
 
-    public void setPhoneNumber(String contactnumber1) {
-        this.phoneNumber = contactnumber1;
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String contactnumber1) {
+        this.mobileNumber = contactnumber1;
     }
 
     public String getEmailAddress() {
@@ -29,8 +36,19 @@ public class Contact {
         this.emailAddress = email_id_1;
     }
 
-    private String firstName;
-    private String phoneNumber;
+
+    public void set_id(String _id){
+        this._id = _id;
+    }
+    public String get_id(){
+        return this._id;
+    }
+
+
+    private String Firstname;
+    private String Lastname;
+    private String mobileNumber;
     private String emailAddress;
+    private String _id;
 
 }

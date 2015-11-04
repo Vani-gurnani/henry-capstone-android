@@ -128,7 +128,7 @@ public class MainActivity extends Activity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            intent = new Intent(this, EmergencyContactActivity.class);
+            intent = new Intent(this, RegistrationContactActivity.class);
         }
         else if (id == R.id.action_about_us){
             intent = new Intent(this, AboutUs.class);

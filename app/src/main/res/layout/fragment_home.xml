@@ -9,19 +9,11 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ada59c">
+        android:background="@drawable/room902">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:background="@drawable/help2"
-            android:layout_gravity="center"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/button"
-            android:layout_alignEnd="@+id/button" />
 
-        <Button
+
+       <!-- <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I am safe now"
@@ -29,7 +21,7 @@
             android:layout_gravity="center_horizontal|bottom"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="118dp" />
+            android:layout_marginBottom="118dp" />-->
     </FrameLayout>
 
 
